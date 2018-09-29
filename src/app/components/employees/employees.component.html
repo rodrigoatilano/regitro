@@ -1,0 +1,70 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <form ngNativeValidate [formGroup]="form" (ngSubmit)="registrarEmpleado()">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input formControlName="nombre" name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input formControlName="email" name="email" type="email" class="form-control" id="email" placeholder="ejemplo@ejemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fechanan">Fecha Nacimiento</label>
+                            <input formControlName="fecha_nan" name="fecha" type="date" class="form-control" id="fechanan">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="domicilio">Domicilio</label>
+                            <textarea formControlName="domicilio" name="domicilio" class="form-control" id="domicilio" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-8">
+            <h4 class="text-right">
+                Empleados registrados
+            </h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Fecha nacimiento</th>
+                        <th scope="col">Domicilio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rodrigo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>Juan</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
